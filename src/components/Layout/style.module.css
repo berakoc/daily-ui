@@ -1,0 +1,20 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.goBack {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 1;
+    padding: 12px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    user-select: none;
+}

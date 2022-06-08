@@ -1,0 +1,49 @@
+.ModelDisplay {
+  border-radius: 16px;
+  padding: 24px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.Button {
+  border-radius: 8px;
+  background-color: #edeffb;
+  color: #302f41;
+  user-select: none;
+  padding: 12px 32px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.Button:hover {
+  opacity: 1;
+}
+
+.Menu {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  background-color: white;
+  top: 9vh;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.MenuItem a {
+  font-weight: 500;
+  color: #302f41;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.MenuItem a:hover {
+  background-color: #edeffb;
+}
