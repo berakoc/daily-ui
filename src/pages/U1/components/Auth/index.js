@@ -75,7 +75,9 @@ const Auth = () => {
         </a>
       </Conditional>
       <Space size={24} />
-      <Button type='submit'>{ authMode === AuthMode.LOGIN ? 'Sign In' : 'Sign Up'}</Button>
+      <Button type='submit'>
+        {authMode === AuthMode.LOGIN ? 'Sign In' : 'Sign Up'}
+      </Button>
       <Conditional condition={authMode === AuthMode.SIGNUP}>
         <Space size={12} />
         <Checkbox

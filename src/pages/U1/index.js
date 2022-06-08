@@ -10,7 +10,7 @@ const UI1 = () => {
   const [pageType, setPageType] = useState(PageType.GET_STARTED);
   return (
     <Layout backgroundColor={'#FFECEA'}>
-      <MobileDevice>
+      <MobileDevice shouldRenderFirstChild={pageType === PageType.AUTH}>
         <Conditional
           condition={pageType === PageType.GET_STARTED}
           firstChildren={
