@@ -40,8 +40,8 @@
 .SeparatorLine {
     width: 100%;
     height: 1px;
-    background-color: #3E3A2E;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    /* #3d392e; */
+    background-image: linear-gradient(to left, rgba(61, 57, 46, 0.2), #3d392e 20% 80%, rgba(61, 57, 46, 0.2));
     position: absolute;
 }
 
