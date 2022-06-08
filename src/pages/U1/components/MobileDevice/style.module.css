@@ -1,0 +1,12 @@
+.MobileDevice {
+    width: 321px;
+    height: 693px;
+    box-shadow: 0px 8px 32px 4px rgba(65, 25, 13, 0.1);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0 20px;
+}

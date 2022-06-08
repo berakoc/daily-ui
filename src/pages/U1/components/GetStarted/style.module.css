@@ -1,0 +1,45 @@
+.GetStarted {
+    text-align: center;
+}
+
+.GetStartedImage {
+    visibility: visible;
+    width: 100%;
+}
+
+.GetStartedTitle {
+    font-weight: 600px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 12px 0;
+}
+
+.GetStartedText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 48px;
+}
+
+.GetStartedToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GetStartedToggleItem {
+    height: 8px;
+    border-radius: 8px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.GetStartedToggleItemActive {
+    background-color: #FF9259;
+    width: 28px;
+}
+
+.GetStartedToggleItemPassive {
+    background-color: #E8E8E8;
+    width: 8px;
+}

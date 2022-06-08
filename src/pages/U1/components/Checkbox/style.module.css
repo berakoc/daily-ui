@@ -1,0 +1,22 @@
+.Checkbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.CheckboxInput {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #C1C6CE;
+    border-radius: 2px;
+}
+
+.CheckboxInput:checked {
+    background-color: #FF9259;
+    margin-right: 2px;
+}
+
+.CheckboxLabel {
+    font-size: 12px;
+    line-height: 24px;
+}

@@ -1,0 +1,78 @@
+.AuthForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.AuthTitle {
+    color: #2F2D2D;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.AuthAnchor {
+    color: #E14C20;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.AuthAnchor:hover {
+    text-decoration: underline;
+}
+
+.ForgotPassword {
+    line-height: 21px;
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+.Separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.SeparatorLine {
+    width: 100%;
+    height: 1px;
+    background-color: #3E3A2E;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    position: absolute;
+}
+
+.SeparatorText {
+    color: #3E3A2E;
+    padding: 0 12px;
+    background-color: white;
+    z-index: 1;
+}
+
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CustomIconBadge:not(:last-child) {
+    margin-right: 32px;
+}
+
+.RedirectAnchor {
+    font-weight: 600;
+}
+
+.Text {
+    color: #3E3A2E;
+    align-self: center;
+}
+
+.TermsAnchor {
+    font-weight: 500;
+    font-size: inherit;
+    line-height: inherit;
+}

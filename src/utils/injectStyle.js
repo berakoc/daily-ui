@@ -6,17 +6,17 @@
  */
 export default function injectStyle(styles, ...classNames) {
   let result = '';
+  let filteredClassNames = classNames.filter(Boolean);
   if (process.env.REACT_TEST)
-      classNames = classNames
-          .filter((className) => ~className.indexOf(':'))
-          .concat(':test');
-  if (!classNames[0]) return '';
-  for (const className of classNames) {
-      const isGlobal = ~className.indexOf(':');
-      result += (isGlobal
-          ? className.substring(1)
-          : styles[className]
-      ).concat(' ');
+    filteredClassNames = filteredClassNames
+      .filter((className) => ~className.indexOf(':'))
+      .concat(':test');
+  if (!filteredClassNames[0]) return '';
+  for (const className of filteredClassNames) {
+    const isGlobal = ~className.indexOf(':');
+    result += (isGlobal ? className.substring(1) : styles[className]).concat(
+      ' '
+    );
   }
   return result.trim();
-};
+}

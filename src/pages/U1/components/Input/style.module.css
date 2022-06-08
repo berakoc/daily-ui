@@ -1,0 +1,49 @@
+.Input {
+    width: 100%;
+}
+
+.InputField {
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+}
+
+.Mask {
+    position: relative;
+}
+
+.InputField:focus {
+    border: 1px solid #FF9259;
+}
+
+.InputError {
+    color: #E14C20;
+    font-size: 12px;
+}
+
+::placeholder {
+    color: #BABFC6;
+}
+
+.PasswordInputIcon {
+    position: absolute;
+    top: 34%;
+    right: 12px;
+    cursor: pointer;
+}
+
+.hidden {
+    right: 12px;
+}
+
+.notHidden {
+    right: 13.2px;
+}
+
+.InputFieldError {
+    border: 1px solid #E14C20;
+}
