@@ -9,4 +9,15 @@
     align-items: center;
     background-color: white;
     padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.LeavesImage {
+    width: 124px;
+    height: 124px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
 }
