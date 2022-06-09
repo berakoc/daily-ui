@@ -1,5 +1,6 @@
+import { Checkbox } from '@mantine/core';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import Button from '../../../../components/Button';
 import Conditional from '../../../../components/Conditional';
 import For from '../../../../components/For';
@@ -8,8 +9,8 @@ import {
   authAlternativeMethodIconNames,
   AuthMode,
 } from '../../../../constants';
+import getCompoundFunction from '../../../../utils/getCompoundFunction';
 import injectStyle from '../../../../utils/injectStyle';
-import Checkbox from '../Checkbox';
 import IconBadge from '../IconBadge';
 import Input from '../Input';
 import S from './style.module.css';
@@ -26,6 +27,8 @@ const Auth = () => {
     handleSubmit,
     register,
     formState: { errors },
+    clearErrors,
+    control,
   } = useForm();
 
   const onSubmit = (data) => {
@@ -80,21 +83,29 @@ const Auth = () => {
       </Button>
       <Conditional condition={authMode === AuthMode.SIGNUP}>
         <Space size={12} />
-        <Checkbox
-          register={register}
-          fieldName='isTermsAccepted'
-          labelText={
-            <>
-              I agree to the{' '}
-              <span className={injectStyle(S, 'AuthAnchor', 'TermsAnchor')}>
-                Terms of Service
-              </span>{' '}
-              and{' '}
-              <span className={injectStyle(S, 'AuthAnchor', 'TermsAnchor')}>
-                Privacy Policy
-              </span>
-            </>
-          }
+        <Controller
+          name='isTermsAccepted'
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => (
+            <Checkbox
+              {...field}
+              
+              label={
+                <>
+                  I agree to the{' '}
+                  <span className={injectStyle(S, 'AuthAnchor', 'TermsAnchor')}>
+                    Terms of Service
+                  </span>{' '}
+                  and{' '}
+                  <span className={injectStyle(S, 'AuthAnchor', 'TermsAnchor')}>
+                    Privacy Policy
+                  </span>
+                </>
+              }
+              color='orange'
+            />
+          )}
         />
       </Conditional>
       <Space size={24} />
@@ -117,7 +128,10 @@ const Auth = () => {
           <div className={injectStyle(S, 'Text')}>
             Not a member?{' '}
             <span
-              onClick={() => setAuthMode(AuthMode.SIGNUP)}
+              onClick={getCompoundFunction(
+                () => setAuthMode(AuthMode.SIGNUP),
+                clearErrors
+              )}
               className={injectStyle(S, 'AuthAnchor', 'RedirectAnchor')}
             >
               Sign Up
@@ -128,7 +142,10 @@ const Auth = () => {
           <div className={injectStyle(S, 'Text')}>
             I am already a member.{' '}
             <span
-              onClick={() => setAuthMode(AuthMode.LOGIN)}
+              onClick={getCompoundFunction(
+                () => setAuthMode(AuthMode.LOGIN),
+                clearErrors
+              )}
               className={injectStyle(S, 'AuthAnchor', 'RedirectAnchor')}
             >
               Sign In
