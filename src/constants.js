@@ -3,6 +3,10 @@ export const mainMenuModelList = [
     href: '/UI1',
     name: 'UI1',
   },
+  {
+    href: '/UI2',
+    name: 'UI2',
+  },
 ];
 
 export const PageType = {

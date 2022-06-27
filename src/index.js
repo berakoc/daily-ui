@@ -5,15 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import UI1 from './pages/U1';
+import UI2 from './pages/U2';
+import { ThemeProvider } from 'styled-components';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route element={<App />} path='/' />
-        <Route element={<UI1 />} path='/UI1' />
-      </Routes>
+      <ThemeProvider theme={{}}>
+        <Routes>
+          <Route element={<App />} path='/' />
+          <Route element={<UI1 />} path='/UI1' />
+          <Route element={<UI2 />} path='/UI2' />
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
